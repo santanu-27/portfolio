@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OOF! — Visual Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bgfx" aria-hidden="true"><div class="grid2"></div><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="beam"></i><canvas id="bgc"></canvas></div>
+<div class="edit" aria-hidden="true"><div class="bits"></div><div class="vf"><i class="c a"></i><i class="c b"></i><i class="c d"></i><i class="c e"></i><span class="rec"><b></b>REC <em id="tc">00:00:00:00</em></span><span class="spec">4K  24 fps  f/2.8  ISO 400</span><i class="focus"></i></div><canvas id="tl"></canvas></div>
+<div id="glow" aria-hidden="true"></div><div id="aur" aria-hidden="true"><i></i><i></i><i></i></div><div id="gbg" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas><div id="prog"></div><div id="intro"><span>OOF!</span><b id="cnt">0</b><u></u></div>
+<header><div class="wrap"><nav>
+ <a class="logo" href="#top">OOF!</a>
+ <div class="links" id="links">
+  <a href="#lookbook">Lookbook</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+ </div>
+ <div style="display:flex;gap:.6rem">
+  <button class="icon-btn" id="theme" aria-label="Toggle light and dark theme">◐</button>
+  <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">≡</button>
+ </div>
+</nav></div></header>
+
+<div id="sc" data-scroll-container><main id="top">
+<div class="wrap hero">
+ <h1><span class="w" style="--d:0s">Moving</span> <span class="w" style="--d:.12s">images,</span> <em class="w" style="--d:.24s">quiet</em> <span class="w" style="--d:.36s">frames.</span></h1>
+ <p>I edit video, retouch photographs, design identities and shoot cinematography. Slow light, soft color and careful cuts.</p>
+ <div class="roles" id="roles">
+  <button class="chip" data-go="video">Video editing</button>
+  <button class="chip" data-go="photo">Photo editing</button>
+  <button class="chip" data-go="design">Graphic design</button>
+  <button class="chip" data-go="cine">Cinematography</button>
+ </div>
+ <div class="grade" id="grade" style="--p:50%">
+  <div class="scene before"></div><div class="scene after"></div>
+  <div class="bar"></div>
+  <span class="tag l">Raw</span><span class="tag r">Graded</span>
+  <input type="range" min="0" max="100" value="50" aria-label="Drag to compare raw and graded image">
+ </div>
+</div>
+
+<section id="lookbook"><div class="wrap">
+ <div class="head"><h2>The lookbook</h2><p style="color:var(--mute);margin:0;max-width:34ch">Click the cover to open it, then click any page or use the arrows to flip.</p></div>
+ <div class="stage"><div class="book" id="book" tabindex="0" aria-label="Interactive lookbook">
+  <div class="sheet"><div class="face front cov" style="background:linear-gradient(135deg,#9fb2bd,#8fa194)"><h3>Lookbook</h3><p>Selected work, 2026</p></div><div class="face back"><h3>Hello.</h3><p>I shape stories with light, color and rhythm. Turn the page to see how.</p></div></div>
+  <div class="sheet"><div class="face front pic" style="background:linear-gradient(160deg,#9fb2bd,#e3d3c3)"><small>Video editing</small><h3>Slow Tide</h3></div><div class="face back pic" style="background:linear-gradient(160deg,#d8c6c9,#b5a6ae)"><small>Photo editing</small><h3>Morning Portraits</h3></div></div>
+  <div class="sheet"><div class="face front pic" style="background:linear-gradient(160deg,#c9bfae,#8fa194)"><small>Graphic design</small><h3>Alder Studio</h3></div><div class="face back pic" style="background:linear-gradient(160deg,#4d5f66,#c7a58d)"><small>Cinematography</small><h3>Quiet Hours</h3></div></div>
+  <div class="sheet"><div class="face front"><h3>Good edits are felt, not noticed.</h3><p>My working rule</p></div><div class="face back cov" style="background:linear-gradient(135deg,#8fa194,#9fb2bd)"><h3>Let’s talk.</h3><p>hello@yourname.com</p></div></div>
+ </div></div>
+ <div class="bk-ctrl"><button class="icon-btn" id="bp" aria-label="Previous page">←</button><span id="bc">Closed</span><button class="icon-btn" id="bn" aria-label="Next page">→</button></div>
+</div></section>
+
+<div class="marquee" aria-hidden="true"><div id="tools"></div></div>
+
+<section id="work"><div class="wrap">
+ <div class="head reveal"><h2>Selected work</h2><div class="filters" id="filters"></div></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="about"><div class="wrap about reveal">
+ <h2 style="font-size:clamp(2.2rem,5vw,3.6rem)">Calm images, made with intent.</h2>
+ <div>
+  <p>Replace this with your story: where you started, what you care about, and how you work with clients. A few honest sentences go further than a long list.</p>
+  <p>Tools: Premiere Pro, DaVinci Resolve, After Effects, Photoshop, Lightroom, Illustrator, Figma.</p>
+  <div class="stats"><div><b data-n="120" data-s="+">120+</b><span>Projects</span></div><div><b data-n="6" data-s=" yrs">6 yrs</b><span>Experience</span></div><div><b data-n="40" data-s="">40</b><span>Happy clients</span></div></div>
+ </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap reveal">
+ <h2>Let’s make something gentle and striking.</h2>
+ <a class="btn" href="mailto:hello@yourname.com">hello@yourname.com</a>
+ <div class="socials"><a href="#">Instagram</a><a href="#">Behance</a><a href="#">Vimeo</a><a href="#">YouTube</a></div>
+</div></section>
+</main>
+<footer>© 2026 OOF!. All rights reserved.</footer></div>
+
+<dialog id="lb"><div class="lb">
+ <div class="art" id="lbArt"></div>
+ <div class="info"><div class="row"><button class="icon-btn" id="prev" aria-label="Previous project">←</button><button class="icon-btn" id="next" aria-label="Next project">→</button><button class="icon-btn" id="close" aria-label="Close">✕</button></div>
+  <small id="lbCat" style="color:var(--mute)"></small><h3 id="lbTitle"></h3><p id="lbDesc"></p>
+  <p id="lbMeta"></p></div>
+</div></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
